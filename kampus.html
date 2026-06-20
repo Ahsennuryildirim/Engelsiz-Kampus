@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kampüs</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- TOAST -->
+
+    <div id="toastBox"></div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Engelsiz Kampüs
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Ana Sayfa
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kampus.html">
+                            Kampüs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehir.html">
+                            Şehir
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="randevu.html">
+                            Randevu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+    <a class="nav-link" href="favoriler.html">
+        ❤️ Favoriler
+    </a>
+</li>
+
+                </ul>
+                <div class="dropdown ms-3">
+
+    <button class="btn btn-outline-light dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown">
+
+        🎨 Tema
+
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-dark">
+
+        <li>
+
+            <button class="dropdown-item"
+                onclick="temaAyarla('dark')">
+
+                Dark Mode
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button class="dropdown-item"
+                onclick="temaAyarla('light')">
+
+                Light Mode
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button class="dropdown-item"
+                onclick="temaAyarla('blue')">
+
+                Blue Mode
+
+            </button>
+
+        </li>
+
+    </ul>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="container">
+
+        <div class="hero-section text-center">
+
+            <h1>
+                Kampüs Erişilebilirlik Sistemi
+            </h1>
+
+            <p>
+                Yeni mekan ekle ve erişilebilirlik durumlarını görüntüle.
+            </p>
+
+        </div>
+
+    </section>
+
+   <!-- İSTATİSTİKLER -->
+
+<section class="container mt-5">
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card-box text-center">
+
+                <h3 id="toplamMekan">0</h3>
+
+                <p>Toplam Mekan</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card-box text-center">
+
+                <h3 id="rampaVar">0</h3>
+
+                <p>Rampa Var</p>
+
+                <div class="progress mt-3">
+
+                    <div id="rampaVarBar"
+                        class="progress-bar bg-success"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card-box text-center">
+
+                <h3 id="rampaYok">0</h3>
+
+                <p>Rampa Yok</p>
+
+                <div class="progress mt-3">
+
+                    <div id="rampaYokBar"
+                        class="progress-bar bg-danger"
+                        style="width:0%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ARAMA -->
+
+<section class="container mt-4">
+
+    <input
+        type="text"
+        id="aramaKutusu"
+        class="form-control form-control-lg"
+        placeholder="Mekan Ara..."
+        onkeyup="aramaYap()">
+
+</section> 
+
+    <!-- FORM -->
+
+    <section class="container mt-5">
+
+        <div class="form-box">
+
+            <h2>
+                Mekan Ekle
+            </h2>
+
+            <!-- FİLTRELER -->
+
+            <div class="filter-buttons mt-4">
+
+                <button onclick="hepsiniGoster()"
+                    class="filter-btn active-filter">
+
+                    Tümü
+
+                </button>
+
+                <button onclick="filtrele('Rampa Var')"
+                    class="filter-btn">
+
+                    Rampa Var
+
+                </button>
+
+                <button onclick="filtrele('Rampa Yok')"
+                    class="filter-btn">
+
+                    Rampa Yok
+
+                </button>
+
+            </div>
+
+            <!-- INPUTLAR -->
+
+            <div class="row g-3 mt-3">
+
+                <div class="col-md-5">
+
+                    <input type="text"
+                        id="mekanAdi"
+                        class="form-control form-control-lg"
+                        placeholder="Mekan adı">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <select id="durum"
+                        class="form-select form-select-lg">
+
+                        <option value="">
+                            Erişilebilirlik seç
+                        </option>
+
+                        <option value="Rampa Var">
+                            Rampa Var
+                        </option>
+
+                        <option value="Rampa Yok">
+                            Rampa Yok
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <button onclick="mekanEkle()"
+                        class="btn btn-primary btn-lg w-100 ekle-btn">
+
+                        Ekle
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LİSTE -->
+
+    <section class="container mt-5">
+
+        <div class="row g-4" id="liste"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Engelsiz Kampüs Projesi
+
+    </footer>
+
+    <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

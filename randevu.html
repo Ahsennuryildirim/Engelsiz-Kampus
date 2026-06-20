@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Randevu Sistemi</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Engelsiz Kampüs
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Ana Sayfa
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="kampus.html">
+                            Kampüs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehir.html">
+                            Şehir
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="randevu.html">
+                            Randevu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+    <a class="nav-link" href="favoriler.html">
+        ❤️ Favoriler
+    </a>
+</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="container">
+
+        <div class="hero-section text-center">
+
+            <h1>
+                Randevu Asistanı
+            </h1>
+
+            <p>
+                Randevularını kolayca planla ve takip et.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FORM -->
+
+    <section class="container mt-5">
+
+        <div class="form-box">
+
+            <h2>
+    Randevu Oluştur
+</h2>
+
+<div class="row g-3 mt-3">
+
+    <!-- Hastane -->
+    <div class="col-md-3">
+
+        <select
+        id="randevuAdi"
+        class="form-select form-select-lg">
+
+            <option value="">Hastane Seçiniz</option>
+
+<!-- ERZURUM -->
+<option>Atatürk Üniversitesi Araştırma Hastanesi</option>
+<option>Erzurum Şehir Hastanesi</option>
+<option>Bölge Eğitim ve Araştırma Hastanesi</option>
+<option>Palandöken Devlet Hastanesi</option>
+<option>Mareşal Çakmak Devlet Hastanesi</option>
+<option>Nenehatun Kadın Doğum Hastanesi</option>
+<option>Şenkaya Devlet Hastanesi</option>
+<option>Oltu Devlet Hastanesi</option>
+<option>Horasan Devlet Hastanesi</option>
+<option>Pasinler Devlet Hastanesi</option>
+
+<!-- ANKARA -->
+<option>Ankara Şehir Hastanesi</option>
+<option>Hacettepe Üniversitesi Hastanesi</option>
+<option>İbn-i Sina Hastanesi</option>
+<option>Cebeci Araştırma Hastanesi</option>
+<option>Gazi Üniversitesi Hastanesi</option>
+<option>Ankara Eğitim ve Araştırma Hastanesi</option>
+<option>Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi</option>
+<option>Etlik Şehir Hastanesi</option>
+<option>Yüksek İhtisas Hastanesi</option>
+<option>Keçiören Eğitim ve Araştırma Hastanesi</option>
+<option>Dr. Sami Ulus Çocuk Hastanesi</option>
+<option>Numune Hastanesi</option>
+
+<!-- SİVAS -->
+<option>Sivas Numune Hastanesi</option>
+<option>Sivas Cumhuriyet Üniversitesi Hastanesi</option>
+<option>Sivas Devlet Hastanesi</option>
+<option>Sivas Ağız ve Diş Sağlığı Merkezi</option>
+<option>Şarkışla Devlet Hastanesi</option>
+<option>Suşehri Devlet Hastanesi</option>
+<option>Kangal Devlet Hastanesi</option>
+<option>Gemerek Devlet Hastanesi</option>
+<option>Zara Devlet Hastanesi</option>
+<option>Divriği Sadık Özgür Devlet Hastanesi</option>
+<option>Yıldızeli Devlet Hastanesi</option><option value="">Hastane Seçiniz</option>
+
+<!-- ERZURUM -->
+<option>Atatürk Üniversitesi Araştırma Hastanesi</option>
+<option>Erzurum Şehir Hastanesi</option>
+<option>Bölge Eğitim ve Araştırma Hastanesi</option>
+<option>Palandöken Devlet Hastanesi</option>
+<option>Mareşal Çakmak Devlet Hastanesi</option>
+<option>Nenehatun Kadın Doğum Hastanesi</option>
+<option>Şenkaya Devlet Hastanesi</option>
+<option>Oltu Devlet Hastanesi</option>
+<option>Horasan Devlet Hastanesi</option>
+<option>Pasinler Devlet Hastanesi</option>
+
+<!-- ANKARA -->
+<option>Ankara Şehir Hastanesi</option>
+<option>Hacettepe Üniversitesi Hastanesi</option>
+<option>İbn-i Sina Hastanesi</option>
+<option>Cebeci Araştırma Hastanesi</option>
+<option>Gazi Üniversitesi Hastanesi</option>
+<option>Ankara Eğitim ve Araştırma Hastanesi</option>
+<option>Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi</option>
+<option>Etlik Şehir Hastanesi</option>
+<option>Yüksek İhtisas Hastanesi</option>
+<option>Keçiören Eğitim ve Araştırma Hastanesi</option>
+<option>Dr. Sami Ulus Çocuk Hastanesi</option>
+<option>Numune Hastanesi</option>
+
+<!-- SİVAS -->
+<option>Sivas Numune Hastanesi</option>
+<option>Sivas Cumhuriyet Üniversitesi Hastanesi</option>
+<option>Sivas Devlet Hastanesi</option>
+<option>Sivas Ağız ve Diş Sağlığı Merkezi</option>
+<option>Şarkışla Devlet Hastanesi</option>
+<option>Suşehri Devlet Hastanesi</option>
+<option>Kangal Devlet Hastanesi</option>
+<option>Gemerek Devlet Hastanesi</option>
+<option>Zara Devlet Hastanesi</option>
+<option>Divriği Sadık Özgür Devlet Hastanesi</option>
+<option>Yıldızeli Devlet Hastanesi</option>
+
+        </select>
+
+    </div>
+
+    <!-- Tarih -->
+    <div class="col-md-2">
+
+        <input
+        type="date"
+        id="randevuTarih"
+        class="form-control form-control-lg">
+
+    </div>
+
+    <!-- Saat -->
+    <div class="col-md-2">
+
+        <input
+        type="time"
+        id="randevuSaat"
+        class="form-control form-control-lg">
+
+    </div>
+
+    <!-- Branş -->
+    <div class="col-md-3">
+
+        <select
+        id="randevuBrans"
+        class="form-select form-select-lg">
+
+           <option value="">Branş Seçiniz</option>
+
+<option>👁️ Göz Hastalıkları</option>
+<option>❤️ Kardiyoloji</option>
+<option>🦴 Ortopedi ve Travmatoloji</option>
+<option>🩺 Dahiliye (İç Hastalıkları)</option>
+<option>✨ Dermatoloji (Cildiye)</option>
+<option>🧠 Nöroloji</option>
+<option>🧠 Beyin ve Sinir Cerrahisi</option>
+<option>🫁 Göğüs Hastalıkları</option>
+<option>👂 Kulak Burun Boğaz (KBB)</option>
+<option>🦷 Diş Hekimliği</option>
+<option>👶 Çocuk Sağlığı ve Hastalıkları</option>
+<option>🤰 Kadın Hastalıkları ve Doğum</option>
+<option>🩹 Genel Cerrahi</option>
+<option>🩸 Hematoloji</option>
+<option>💉 Enfeksiyon Hastalıkları</option>
+<option>🩻 Radyoloji</option>
+<option>🧪 Tıbbi Biyokimya</option>
+<option>🩺 Fizik Tedavi ve Rehabilitasyon</option>
+<option>🧘 Psikiyatri</option>
+<option>🧬 Endokrinoloji</option>
+<option>🩸 Nefroloji</option>
+<option>🫀 Kalp ve Damar Cerrahisi</option>
+<option>🚑 Acil Tıp</option>
+<option>🩹 Plastik Cerrahi</option>
+<option>🦠 Romatoloji</option>
+<option>🍽️ Gastroenteroloji</option>
+<option>🫁 Göğüs Cerrahisi</option>
+<option>⚕️ Üroloji</option>
+<option>👴 Geriatri</option>
+<option>🧬 Onkoloji</option>
+<option>🤧 Alerji ve İmmünoloji</option>
+
+        </select>
+
+    </div>
+
+    <!-- Buton -->
+    <div class="col-md-2">
+
+        <button
+        onclick="randevuEkle()"
+        class="btn btn-success btn-lg w-100">
+
+            Oluştur
+
+        </button>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </section>
+
+    <section class="container mt-5">
+
+    <div class="row g-4" id="randevuListe"></div>
+
+</section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Engelsiz Kampüs Projesi
+
+    </footer>
+
+    <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

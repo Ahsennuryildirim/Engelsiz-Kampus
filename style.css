@@ -1,0 +1,562 @@
+/* GENEL */
+
+body{
+
+    background:#0b1120;
+
+    font-family:'Segoe UI',sans-serif;
+
+    color:#e2e8f0;
+
+    min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    background:#111827;
+
+   padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar-brand{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:white !important;
+}
+
+.nav-link{
+
+    color:#cbd5e1 !important;
+
+    margin-left:18px;
+
+    transition:0.3s;
+
+    font-weight:500;
+}
+
+.nav-link:hover{
+
+    color:#60a5fa !important;
+}
+
+/* HERO */
+
+.hero-section{
+
+    background:#131c31;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:70px 40px;
+
+    border-radius:30px;
+
+    margin-top:60px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.35);
+}
+
+.hero-section h1{
+
+    font-size:56px;
+
+    font-weight:800;
+
+    color:white;
+}
+
+.hero-section p{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    color:#94a3b8;
+}
+
+.hero-btn{
+
+    margin-top:30px;
+
+    padding:14px 32px;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    background:#2563eb;
+
+    border:none;
+}
+
+/* KARTLAR */
+
+.card-box{
+
+    background:#131c31;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:26px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    height:100%;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+}
+
+.card-box i{
+
+    font-size:48px;
+
+    color:#60a5fa;
+}
+
+.card-box h3{
+
+    margin-top:20px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:white;
+}
+
+.card-box p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    color:#94a3b8;
+}
+
+/* FORM */
+
+.form-box{
+
+    background:#131c31;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:26px;
+
+    padding:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+.form-box h2{
+
+    color:white;
+
+    font-size:40px;
+
+    font-weight:700;
+}
+
+/* INPUT */
+
+.form-control,
+.form-select{
+
+    background:#1e293b !important;
+
+    border:none !important;
+
+    color:white !important;
+
+    border-radius:14px !important;
+
+    padding:16px !important;
+}
+
+.form-control::placeholder{
+
+    color:#94a3b8;
+}
+
+/* MEKAN KART */
+
+.mekan-card{
+
+    background:#131c31;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    transition:0.3s;
+
+    height:100%;
+}
+
+.mekan-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563eb;
+}
+
+.mekan-card h3{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+}
+
+.mekan-card p{
+
+    color:#94a3b8;
+
+    margin-top:15px;
+
+    font-size:18px;
+}
+
+/* BUTONLAR */
+
+.sil-btn{
+
+    margin-top:20px;
+
+    border:none;
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+}
+
+.ekle-btn{
+
+    border-radius:14px !important;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:80px;
+
+    background:#111827;
+
+    color:#94a3b8;
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-section{
+
+        padding:60px 20px;
+    }
+
+    .hero-section h1{
+
+        font-size:42px;
+    }
+
+    .hero-section p{
+
+        font-size:18px;
+    }
+
+}
+/* TOAST */
+
+#toastBox{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    z-index:9999;
+}
+
+.toast-notification{
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:16px 22px;
+
+    margin-top:15px;
+
+    border-radius:14px;
+
+    min-width:280px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+
+    animation:slideIn 0.4s ease;
+}
+
+/* ANİMASYON */
+
+@keyframes slideIn{
+
+    from{
+
+        transform:translateX(100px);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+    }
+}
+/* FİLTRE */
+
+.filter-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.filter-buttons button{
+
+    padding:12px 22px;
+
+    border-radius:14px;
+
+    font-weight:600;
+}
+/* AKTİF MENÜ */
+
+.nav-link.active{
+
+    color:#60a5fa !important;
+
+    position:relative;
+}
+
+.nav-link.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:3px;
+
+    background:#2563eb;
+
+    border-radius:20px;
+}
+
+/* PREMIUM HOVER */
+
+.card-box:hover,
+.mekan-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    box-shadow:
+    0 15px 40px rgba(37,99,235,0.25);
+
+    border-color:#3b82f6;
+}
+
+/* BUTON HOVER */
+
+.ekle-btn:hover{
+
+    transform:translateY(-2px);
+
+    transition:0.3s;
+}
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode{
+
+    background:#f1f5f9;
+
+    color:#0f172a;
+}
+
+.light-mode .navbar{
+
+    background:white;
+}
+
+.light-mode .navbar-brand{
+
+    color:#0f172a !important;
+}
+
+.light-mode .nav-link{
+
+    color:#0f172a !important;
+}
+
+.light-mode .hero-section,
+.light-mode .card-box,
+.light-mode .form-box,
+.light-mode .mekan-card{
+
+    background:white;
+
+    color:#0f172a;
+
+    border:1px solid #dbeafe;
+}
+
+.light-mode .hero-section p,
+.light-mode .card-box p,
+.light-mode .mekan-card p{
+
+    color:#475569 !important;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3{
+
+    color:#0f172a !important;
+}
+
+.light-mode footer{
+
+    background:white;
+
+    color:#475569;
+}
+
+/* =========================
+   BLUE MODE
+========================= */
+
+.blue-mode{
+
+    background:#0f172a;
+}
+
+.blue-mode .navbar{
+
+    background:#2563eb;
+}
+
+.blue-mode .navbar-brand{
+
+    color:white !important;
+}
+
+.blue-mode .nav-link{
+
+    color:#dbeafe !important;
+}
+
+.blue-mode .hero-section,
+.blue-mode .card-box,
+.blue-mode .form-box,
+.blue-mode .mekan-card{
+
+    background:#1e40af;
+
+    border:1px solid #60a5fa;
+}
+
+.blue-mode .hero-section h1,
+.blue-mode .card-box h3,
+.blue-mode .form-box h2,
+.blue-mode .mekan-card h3{
+
+    color:white;
+}
+
+.blue-mode .hero-section p,
+.blue-mode .card-box p,
+.blue-mode .mekan-card p{
+
+    color:#dbeafe;
+}
+
+.blue-mode footer{
+
+    background:#1d4ed8;
+
+    color:white;
+}
+/* YAKLAŞAN RANDEVU */
+
+.yaklasan-randevu{
+
+    border:2px solid #3b82f6;
+
+    box-shadow:
+    0 0 20px rgba(59,130,246,0.35);
+}
+
+/* GEÇMİŞ RANDEVU */
+
+.gecmis-randevu{
+
+    border:2px solid #64748b;
+
+    background:#0f172a;
+
+    opacity:0.65;
+}
